@@ -21,6 +21,7 @@ document.getElementById('signInForm').addEventListener('submit', function(event)
     console.log("MD5 Hash:", hash.toString());
 
     // Store MD5 hash and timestamp in localStorage
+    localStorage.setItem("apiKey",publicKey);
     localStorage.setItem("md5Hash", hash.toString());
     localStorage.setItem("timestamp", timestamp);
 

@@ -1,18 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-</head>
-<body>
+    <style>
+      /* character card */
+      .character-card {
+        width: 250px;
+        padding: 1rem;
+        border: 3px solid var(--red);
+        border-radius: 1rem 0;
+        margin-top: 2rem;
+      }
+
+      .card-row{
+        display: flex;
+      }
+
+      .character-card img {
+        width: 100%;
+        height: 300px;
+        border: 2px solid var(--black);
+      }
+
+      .card-body {
+        margin-top: 0.5rem;
+        font-size: 1.3rem;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card-body a {
+        text-decoration: none;
+        color: #000;
+        cursor: pointer;
+      }
+      
+      .card-body input {
+        margin-top: 0.3rem;
+        font-size: 1rem;
+        padding: 0.1rem 0.6rem;
+        background-color: var(--blue);
+      }
+    </style>
+  </head>
+  <body>
     <div class="container mt-5">
-        <h2>Welcome to Home Page</h2>
-        <div id="hashContainer" class="mt-3"></div>
-        <div id="timestampContainer" class="mt-3"></div>
+      <h2>Welcome to Home Page</h2>
+      <div id="hashContainer" class="mt-3"></div>
+      <div id="timestampContainer" class="mt-3"></div>
     </div>
 
+    <section>
+      <h2>characters :</h2>
+      <div class="caracters" id="characters-container">
+        <h2>Loading...</h2>
+      </div>
+    </section>
+
+    <button onclick="handlePrevious()">Previous</button>
+    <button onclick="handleNext()">Next</button>
+
     <!-- Include the JavaScript file -->
-    <script src="js/home.js"></script>
-</body>
+    <script src="home.js"></script>
+  </body>
 </html>

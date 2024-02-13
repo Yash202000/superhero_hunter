@@ -7,44 +7,53 @@
     <title>Favorite characters</title>
 
     <!-- global style -->
-    
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    
+
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
   </head>
   <style>
     nav {
-        background: black;
-        color: white;
-        font-size: 1.3rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 3rem;
+      background: black;
+      color: white;
+      font-size: 1.3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 3rem;
+    }
+    @media (max-width: 576px) {
+      nav {
+        padding: 1rem;
       }
-      @media (max-width: 576px) {
-        nav {
-          padding: 1rem;
-        }
-      }
-      nav ul {
-        list-style-type: none;
-        display: flex;
-        align-items: baseline;
-      }
-      nav li {
-        margin-right: 1rem;
-      }
-      nav a {
-        color: white;
-        text-decoration: none;
-      }
-      nav .logo a {
-        font-size: 2rem;
-        color: red;
-      }
+    }
+    nav ul {
+      list-style-type: none;
+      display: flex;
+      align-items: baseline;
+    }
+    nav li {
+      margin-right: 1rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+    nav .logo a {
+      font-size: 2rem;
+      color: red;
+    }
+    .watermark {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      font-size: 24px;
+      color: rgba(0, 0, 0, 0.2); /* Semi-transparent color */
+      pointer-events: none; /* Allows clicks to pass through */
+    }
   </style>
   <body>
-   
     <nav>
       <ul>
         <li class="logo"><a href="./home.html">Marval</a></li>
@@ -52,14 +61,13 @@
       </ul>
     </nav>
 
-    
     <section>
       <div class="caracters" id="favorite-characters">
         <h2>No Favorite Characters Found...</h2>
       </div>
     </section>
 
-    
+    <div class="watermark">@Author: Yash Panchwatkar</div>
     <script src="favorite.js"></script>
   </body>
 </html>

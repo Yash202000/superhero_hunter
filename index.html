@@ -12,8 +12,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
     <style>
       /* Custom styling for the form */
-        
-    nav {
+
+      nav {
         background: black;
         color: white;
         font-size: 1.3rem;
@@ -43,12 +43,10 @@
         font-size: 2rem;
         color: red;
       }
- 
 
       .container {
         max-width: 500px;
         margin: auto;
-        
       }
 
       .form-group {
@@ -57,6 +55,15 @@
 
       .btn-primary {
         width: 100%;
+      }
+
+      .watermark {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        font-size: 24px;
+        color: rgba(0, 0, 0, 0.2); /* Semi-transparent color */
+        pointer-events: none; /* Allows clicks to pass through */
       }
     </style>
   </head>
@@ -93,6 +100,7 @@
       </form>
     </div>
 
+    <div class="watermark">@Author: Yash Panchwatkar</div>
     <script src="signin.js"></script>
   </body>
 </html>

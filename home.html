@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
     <style>
-      
-    nav {
+      nav {
         background: black;
         color: white;
         font-size: 1.3rem;
@@ -36,7 +35,6 @@
         font-size: 2rem;
         color: red;
       }
- 
 
       .search-section {
         display: flex;
@@ -113,6 +111,15 @@
         padding: 1rem 3rem;
         background-color: rgb(255, 255, 255);
       }
+
+      .watermark {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        font-size: 24px;
+        color: rgba(0, 0, 0, 0.2); /* Semi-transparent color */
+        pointer-events: none; /* Allows clicks to pass through */
+      }
     </style>
   </head>
   <body>
@@ -157,6 +164,7 @@
       <button onclick="handleNext()">Next</button>
     </div>
 
+    <div class="watermark">@Author: Yash Panchwatkar</div>
     <script src="home.js"></script>
     <script src="favorite.js"></script>
     <script src="search.js"></script>

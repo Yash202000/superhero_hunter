@@ -3,17 +3,16 @@ let currentPage = 1;
 let limit = 20;
 let offset = 0;
 
-// Retrieve MD5 hash and timestamp from localStorage
+
 const md5Hash = localStorage.getItem("md5Hash");
 const timestamp = localStorage.getItem("timestamp");
 const apiKey = localStorage.getItem("apiKey");
 
-// Display MD5 hash and timestamp in the HTML
+
 document.getElementById("hashContainer").innerText = "MD5 Hash: " + md5Hash;
 document.getElementById("timestampContainer").innerText =
   "Timestamp: " + timestamp;
 
-// Log MD5 hash and timestamp to console
 console.log("MD5 Hash:", md5Hash);
 console.log("Timestamp:", timestamp);
 
@@ -27,10 +26,8 @@ async function fetchData() {
     let arr = data.data.results;
     charactersContainer.innerHTML = "";
   
-    // Create a container for each row of cards
     let rowContainer;
     for (let i = 0; i < arr.length; i++) {
-      // Create a new row container for every 5th card
       if (i % 5 === 0) {
         rowContainer = document.createElement("div");
         rowContainer.classList.add("card-row");
@@ -39,14 +36,12 @@ async function fetchData() {
   
       let favorite = "favorite";
   
-      // Create a character card div and append it to the row container
       const { id, thumbnail, name } = arr[i];
       let div = document.createElement("div");
       div.classList.add("character-card");
       div.setAttribute("id", id);
-      let path = `../pages/characterdetails.html#${id}`;
+      let path = `./characterinfo.html#${id}`;
   
-      // Create card body with image, name, and button
       div.innerHTML = `
         <div class="card-body">
           <img class="poster" src=${thumbnail.path}.jpg alt="">
@@ -55,7 +50,6 @@ async function fetchData() {
         </div>
       `;
   
-      // Append the card to the current row container
       rowContainer.appendChild(div);
     }
     return data;
